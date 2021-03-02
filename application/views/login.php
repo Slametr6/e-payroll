@@ -38,21 +38,21 @@
     <div class="login-area login-s2">
         <div class="container">
             <div class="login-box ptb--100">
-                <form>
+                <form method="post">
                     <div class="login-form-head">
-                        <h4>E-Payroll</h4>
+                        <h2>E-Payroll</h2>
                         <p>Silahkan Login untuk masuk ke Sistem E-Payroll</p>
                     </div>
                     <div class="login-form-body">
                         <div class="form-gp">
-                            <label for="exampleInputEmail1">Email</label>
-                            <input type="email" id="exampleInputEmail1">
-                            <i class="ti-email"></i>
+                            <label for="username">Username</label>
+                            <input type="text" name="username" id="username">
+                            <i class="ti-user"></i>
                             <div class="text-danger"></div>
                         </div>
                         <div class="form-gp">
-                            <label for="exampleInputPassword1">Password</label>
-                            <input type="password" id="exampleInputPassword1">
+                            <label for="password">Password</label>
+                            <input type="password" name="password" id="password">
                             <i class="ti-lock"></i>
                             <div class="text-danger"></div>
                         </div>
