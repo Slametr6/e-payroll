@@ -5,9 +5,13 @@ class App extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->view('include/header');
-		$this->load->view('include/topbar');
-		$this->load->view('admin/index');
-		$this->load->view('include/footer');
+		if ($this->session->userdata('username') == "") {
+			redirect('auth');
+		}
+		$data = array (
+			'konten' => 'home',
+			'judul' => 'Dashboard',
+		);
+		$this->load->view('index', $data);
 	}
 }

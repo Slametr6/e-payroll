@@ -1,6 +1,6 @@
 <footer>
             <div class="footer-area">
-                <p>© Copyright 2021. <a href="http://localhost/e-payroll/">Aisyah</a>.</p>
+                <p>© Copyright 2021. <a href="http://localhost/e-payroll/">E-Payroll</a>.</p>
             </div>
         </footer>
         <!-- footer area end-->

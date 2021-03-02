@@ -49,11 +49,18 @@
                         <div class="clearfix d-md-inline-block d-block">
                             <div class="user-profile m-0">
                                 <img class="avatar user-thumb" src="assets/images/author/avatar.png" alt="avatar">
-                                <h4 class="user-name dropdown-toggle" data-toggle="dropdown">Aisyah <i class="fa fa-angle-down"></i></h4>
+                                <h4 class="user-name dropdown-toggle" data-toggle="dropdown"><?= $this->session->userdata('username');?> <i class="fa fa-angle-down"></i></h4>
                                 <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="#">Profil</a>
-                                    <a class="dropdown-item" href="#">Ubah Password</a>
-                                    <a class="dropdown-item" href="#">Log Out</a>
+									<?php
+									if ($this->session->userdata('username') == 'admin') {
+										?>
+										<a class="dropdown-item" href="app/profiladmin/<?= $this->session->userdata('username');?>">Profil</a>
+									<?php } else {
+										?>
+										<a class="dropdown-item" href="app/profiluser/<?= $this->session->userdata('username');?>">Profil</a>
+									<?php } ?>
+                                    <a class="dropdown-item" href="auth/ubahpass/<?= $this->session->userdata('id_user');?>">Ubah Password</a>
+                                    <a class="dropdown-item" href="auth/logout">Log Out</a>
                                 </div>
                             </div>
                         </div>
