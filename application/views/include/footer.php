@@ -1,6 +1,6 @@
-<footer>
+		<footer>
             <div class="footer-area">
-                <p>© Copyright 2021. <a href="http://localhost/e-payroll/">E-Payroll</a>.</p>
+                <p>© Copyright 2021. <a href="<?= base_url('app');?>">E-Payroll</a>.</p>
             </div>
         </footer>
         <!-- footer area end-->
@@ -8,14 +8,14 @@
     <!-- main wrapper start -->
 
     <!-- jquery latest version -->
-    <script src="assets/js/vendor/jquery-2.2.4.min.js"></script>
+    <script src="<?= base_url();?>assets/js/vendor/jquery-2.2.4.min.js"></script>
     <!-- bootstrap 4 js -->
-    <script src="assets/js/popper.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/owl.carousel.min.js"></script>
-    <script src="assets/js/metisMenu.min.js"></script>
-    <script src="assets/js/jquery.slimscroll.min.js"></script>
-    <script src="assets/js/jquery.slicknav.min.js"></script>
+    <script src="<?= base_url();?>assets/js/popper.min.js"></script>
+    <script src="<?= base_url();?>assets/js/bootstrap.min.js"></script>
+    <script src="<?= base_url();?>assets/js/owl.carousel.min.js"></script>
+    <script src="<?= base_url();?>assets/js/metisMenu.min.js"></script>
+    <script src="<?= base_url();?>assets/js/jquery.slimscroll.min.js"></script>
+    <script src="<?= base_url();?>assets/js/jquery.slicknav.min.js"></script>
 
     <!-- start chart js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
@@ -31,16 +31,16 @@
     <script src="https://www.amcharts.com/lib/3/plugins/export/export.min.js"></script>
     <script src="https://www.amcharts.com/lib/3/themes/light.js"></script>
     <!-- all line chart activation -->
-    <script src="assets/js/line-chart.js"></script>
+    <script src="<?= base_url();?>assets/js/line-chart.js"></script>
     <!-- all pie chart -->
-    <script src="assets/js/pie-chart.js"></script>
+    <script src="<?= base_url();?>assets/js/pie-chart.js"></script>
     <!-- all bar chart -->
-    <script src="assets/js/bar-chart.js"></script>
+    <script src="<?= base_url();?>assets/js/bar-chart.js"></script>
     <!-- all map chart -->
-    <script src="assets/js/maps.js"></script>
+    <script src="<?= base_url();?>assets/js/maps.js"></script>
     <!-- others plugins -->
-    <script src="assets/js/plugins.js"></script>
-    <script src="assets/js/scripts.js"></script>
+    <script src="<?= base_url();?>assets/js/plugins.js"></script>
+    <script src="<?= base_url();?>assets/js/scripts.js"></script>
 </body>
 
 </html>
