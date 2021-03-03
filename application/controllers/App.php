@@ -79,4 +79,42 @@ class App extends CI_Controller {
 			<?php
 		}
 	}
+
+	public function profiladmin($id)
+	{
+		if ($_POST == NULL) {
+			$q = $this->db->query("SELECT * FROM user WHERE id_user='$id'")->row();
+			$data = array (
+				'query' => $q,
+				'konten' => 'admin/profiladmin',
+				'judul' => 'Data Profil',
+			);
+			$this->load->view('index', $data);
+
+		} else {
+			$data = array(
+				'nama' => $this->input->post('nama'),
+				'username' => $this->input->post('username'),
+				'password' => $this->input->post('password'),				
+			);
+
+			$this->db->where('id_user', $id);
+			$this->db->update('user', $data);
+			?>
+			<script type="text/javascript">
+				alert('Data berhasil dirubah !');
+				window.location='<?= base_url()?>app/profiladmin/<?= $id; ?>';
+			</script>
+			<?php
+		}
+	}
+
+	public function slip_gaji($nik, $tgl)
+	{
+		$data = array(
+			'nik' => $nik,
+			'tgl' => $tgl,
+		);
+		$this->load->view('emp/slipgaji', $data);
+	}
 }

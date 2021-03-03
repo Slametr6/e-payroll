@@ -54,13 +54,13 @@
 									<?php
 									if ($this->session->userdata('username') == 'admin') {
 										?>
-										<a class="dropdown-item" href="app/profiladmin/<?= $this->session->userdata('username');?>">Profil</a>
+										<a class="dropdown-item" href="<?= base_url();?>app/profiladmin/<?= $this->session->userdata('id_user');?>">Profil</a>
 									<?php } else {
 										?>
-										<a class="dropdown-item" href="app/profiluser/<?= $this->session->userdata('username');?>">Profil</a>
+										<a class="dropdown-item" href="<?= base_url();?>app/tampilprofil/<?= $this->session->userdata('id_user');?>">Profil</a>
 									<?php } ?>
-                                    <a class="dropdown-item" href="auth/ubahpass/<?= $this->session->userdata('id_user');?>">Ubah Password</a>
-                                    <a class="dropdown-item" href="auth/logout">Log Out</a>
+                                    <a class="dropdown-item" href="<?= base_url();?>auth/ubahpass/<?= $this->session->userdata('id_user');?>">Ubah Password</a>
+                                    <a class="dropdown-item" href="<?= base_url();?>auth/logout">Log Out</a>
                                 </div>
                             </div>
                         </div>

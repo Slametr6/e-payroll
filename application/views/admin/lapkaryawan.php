@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>Data Karyawan</title>
-	<base href="<?php echo base_url() ?>">
+	<base href="<?= base_url() ?>">
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
     <!-- bootstrap 3.0.2 -->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
@@ -45,15 +45,15 @@
 			foreach ($query->result() as $row) {
 			 ?>
 			<tr>
-				<td><?php echo $no++; ?></td>
-				<td><?php echo $row->nik; ?></td>
-				<td><?php echo $row->nama; ?></td>
-				<td><?php echo $row->alamat; ?></td>
-				<td><?php echo $row->jenis_kelamin; ?></td>
-				<td><?php echo $row->agama; ?></td>
-				<td><?php echo $row->pendidikan; ?></td>
-				<td><?php echo $row->asal_sekolah; ?></td>
-				<td><?php echo $row->pekerjaan; ?></td>
+				<td><?= $no++; ?></td>
+				<td><?= $row->nik; ?></td>
+				<td><?= $row->nama; ?></td>
+				<td><?= $row->alamat; ?></td>
+				<td><?= $row->jenis_kelamin; ?></td>
+				<td><?= $row->agama; ?></td>
+				<td><?= $row->pendidikan; ?></td>
+				<td><?= $row->asal_sekolah; ?></td>
+				<td><?= $row->pekerjaan; ?></td>
 			</tr>
 			<?php } ?>
 		</tbody>
