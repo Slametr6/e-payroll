@@ -39,7 +39,7 @@ class Gaji extends CI_Controller
 
 	public function read($id)
 	{
-		$row = $this->Gaji_model->get_by_id($id);
+		$row = $this->M_gaji->get_by_id($id);
         if ($row) {
             $data = array(
 				'id_gaji' => $row->id_gaji,
@@ -78,7 +78,7 @@ class Gaji extends CI_Controller
 				'nik' => $this->input->post('nik',TRUE),
 	    	);
 
-            $this->Gaji_model->insert($data);
+            $this->M_gaji->insert($data);
             $this->session->set_flashdata('message', 'Create Record Success');
             redirect(site_url('gaji'));
         }
@@ -86,7 +86,7 @@ class Gaji extends CI_Controller
 
 	public function update($id) 
     {
-        $row = $this->Gaji_model->get_by_id($id);
+        $row = $this->M_gaji->get_by_id($id);
 
         if ($row) {
             $data = array(
@@ -117,7 +117,7 @@ class Gaji extends CI_Controller
 				'nik' => $this->input->post('nik',TRUE),
 			);
 
-            $this->Gaji_model->update($this->input->post('id_gaji', TRUE), $data);
+            $this->M_gaji->update($this->input->post('id_gaji', TRUE), $data);
             $this->session->set_flashdata('message', 'Update Record Success');
             redirect(site_url('gaji'));
         }
@@ -125,10 +125,10 @@ class Gaji extends CI_Controller
 
 	public function delete($id) 
     {
-        $row = $this->Gaji_model->get_by_id($id);
+        $row = $this->M_gaji->get_by_id($id);
 
         if ($row) {
-            $this->Gaji_model->delete($id);
+            $this->M_gaji->delete($id);
             $this->session->set_flashdata('message', 'Delete Record Success');
             redirect(site_url('gaji'));
         } else {

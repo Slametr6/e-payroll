@@ -8,7 +8,7 @@
                                 <div class="card">
                                     <div class="card-body">
                                         <h4 class="header-title"><?= $judul;?></h4>
-                                        <form method="post">
+                                        <form action="<?= $action;?>" method="post">
 											<div class="form-group">
 												<label for="varchar">Nik <?= form_error('nik') ?></label>
 												<input type="text" class="form-control" name="nik" id="nik" placeholder="Nik" value="<?= $nik; ?>" />
@@ -57,7 +57,6 @@
 											</div>
 											<div class="form-group">
 												<label for="int">Jabatan <?= form_error('id_pekerjaan') ?></label>
-												<!-- <input type="text" class="form-control" name="id_pekerjaan" id="id_pekerjaan" placeholder="Id Pekerjaan" value="<?= $id_pekerjaan; ?>" /> -->
 												<select name="id_pekerjaan" class="form-control">
 													<option value="<?= $id_pekerjaan ?>"><?= $id_pekerjaan ?></option>
 													<?php 
@@ -69,8 +68,8 @@
 												</select>
 											</div>
 											<input type="hidden" name="id_karyawan" value="<?= $id_karyawan; ?>" /> 										
-                                            <button type="submit" class="btn btn-primary mt-4 pr-4 pl-4">Submit</button>
-											<a href="<?= site_url('karyawan') ?>" class="btn btn-default">Cancel</a>
+                                            <button type="submit" class="btn btn-primary"><?= $button;?></button>
+											<a href="<?= site_url('karyawan') ?>" class="btn btn-warning">Cancel</a>
                                         </form>
                                     </div>
                                 </div>

@@ -38,7 +38,7 @@ class Karyawan extends CI_Controller
 
 	public function read($id) 
     {
-        $row = $this->Karyawan_model->get_by_id($id);
+        $row = $this->M_karyawan->get_by_id($id);
         if ($row) {
             $data = array(
 				'id_karyawan' => $row->id_karyawan,
@@ -99,7 +99,7 @@ class Karyawan extends CI_Controller
 				'id_pekerjaan' => $this->input->post('id_pekerjaan',TRUE),
 			);
 
-            $this->Karyawan_model->insert($data);
+            $this->M_karyawan->insert($data);
             $this->session->set_flashdata('message', 'Create Record Success');
             redirect(site_url('karyawan'));
         }
@@ -107,7 +107,7 @@ class Karyawan extends CI_Controller
 
 	public function update($id) 
     {
-        $row = $this->Karyawan_model->get_by_id($id);
+        $row = $this->M_karyawan->get_by_id($id);
 
         if ($row) {
             $data = array(
@@ -154,7 +154,7 @@ class Karyawan extends CI_Controller
 				'id_pekerjaan' => $this->input->post('id_pekerjaan',TRUE),
 			);
 
-            $this->Karyawan_model->update($this->input->post('id_karyawan', TRUE), $data);
+            $this->M_karyawan->update($this->input->post('id_karyawan', TRUE), $data);
             $this->session->set_flashdata('message', 'Update Record Success');
             redirect(site_url('karyawan'));
         }
@@ -162,10 +162,10 @@ class Karyawan extends CI_Controller
 
 	public function delete($id) 
     {
-        $row = $this->Karyawan_model->get_by_id($id);
+        $row = $this->M_karyawan->get_by_id($id);
 
         if ($row) {
-            $this->Karyawan_model->delete($id);
+            $this->M_karyawan->delete($id);
             $this->session->set_flashdata('message', 'Delete Record Success');
             redirect(site_url('karyawan'));
         } else {

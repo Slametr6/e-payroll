@@ -1,4 +1,4 @@
-<div class="main-content-inner">
+		<div class="main-content-inner">
 			<div class="container">	
                 <div class="row">
                     <div class="col-lg-12 col-ml-12">
@@ -8,7 +8,7 @@
                                 <div class="card">
                                     <div class="card-body">
                                         <h4 class="header-title"><?= $judul;?></h4>
-                                        <form method="post">
+                                        <form action="<?= $action;?>" method="post">
 											<div class="form-group">
 												<label for="date">Tanggal <?= form_error('tgl') ?></label>
 												<div class="row">
@@ -42,7 +42,8 @@
 												
 											</div>
 											<input type="hidden" name="id_gaji" value="<?= $id_gaji; ?>" /> 										
-                                            <button type="submit" class="btn btn-primary mt-4 pr-4 pl-4">Submit</button>
+                                            <button type="submit" class="btn btn-primary"><?= $button;?></button>
+											<a href="<?php echo site_url('gaji') ?>" class="btn btn-warning">Cancel</a>
                                         </form>
                                     </div>
                                 </div>

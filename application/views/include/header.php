@@ -41,7 +41,7 @@
                 <div class="row align-items-center">
                     <div class="col-md-3">
                         <div class="logo">
-                            <a href="<?= base_url('app');?>"><img src="<?= base_url();?>assets/images/icon/logo2.png" alt="logo"></a>
+                            <a href="<?= base_url('app');?>"><img src="<?= base_url();?>assets/images/icon/logo3.png" alt="logo"></a>
                         </div>
                     </div>
                     <!-- profile info & task notification -->
