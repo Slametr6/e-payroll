@@ -7,7 +7,7 @@
                             <nav>
                                 <ul id="nav_menu">
 									<?php
-									if ($this->session->userdata('level') == 'admin') {
+										if ($this->session->userdata('level') == 'admin') {
 									?>
 									<li><a href="<?= base_url('app');?>"><i class="fa fa-home"></i><span>Home</span></a></li>
                                     <li><a href="<?= base_url();?>karyawan"><i class="fa fa-users"></i><span>Data Karyawan</span></a></li>
@@ -20,7 +20,7 @@
                                             <li><a href="<?= base_url();?>app/lap_gajikaryawan">Laporan Gaji Karyawan</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="user"><i class="fa fa-user-plus"></i> <span>Manajemen User</span></a></li>
+                                    <li><a href="<?= base_url();?>user"><i class="fa fa-user-plus"></i> <span>Manajemen User</span></a></li>
 
 									<?php } elseif ($this->session->userdata('level') == 'user') {
 										$iduser = $this->session->userdata('id_user');

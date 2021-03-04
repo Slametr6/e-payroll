@@ -9,15 +9,19 @@
                                     <div class="card-body">
                                         <h4 class="header-title"><?= $judul;?></h4>
                                         <form action="<?= $action;?>" method="post">
-											<div class="form-group">
+										<div class="form-row">
+											<div class="form-group col-md-6">
 												<label for="varchar">Jabatan <?= form_error('pekerjaan') ?></label>
 												<input type="text" class="form-control" name="pekerjaan" id="pekerjaan" placeholder="Pekerjaan" value="<?= $pekerjaan; ?>" />
 											</div>
-											<div class="form-group">
+											<div class="form-group col-md-6">
 												<label for="int">Gaji Pokok <?= form_error('gapok') ?></label>
 												<input type="text" class="form-control" name="gapok" id="gapok" placeholder="Gapok" value="<?= $gapok; ?>" />
 											</div>
-											<div class="form-group">
+										</div>
+
+										<div class="form-row">
+											<div class="form-group col-md-6">
 												<label>Tunjangan Keluarga</label>
 												<select name="tukel" class="form-control">
 													<option value="<?= $tukel ?>"><?= $tukel ?></option>
@@ -28,18 +32,22 @@
 													<option value="1200000">KK4</option>
 												</select>
 											</div>
-											<div class="form-group">
+											<div class="form-group col-md-6">
 												<label for="int">Tunjangan Kesehatan <?= form_error('tukes') ?></label>
 												<input type="text" class="form-control" name="tukes" id="tukes" placeholder="Tukes" value="<?= $tukes; ?>" />
 											</div>
-											<div class="form-group">
+										</div>
+
+										<div class="form-row">
+											<div class="form-group col-md-6">
 												<label for="int">Tunjangan Transportasi <?= form_error('tutra') ?></label>
 												<input type="text" class="form-control" name="tutra" id="tutra" placeholder="Tutra" value="<?= $tutra; ?>" />
 											</div>
-											<div class="form-group">
+											<div class="form-group col-md-6">
 												<label for="int">Tunjangan Pendidikan <?= form_error('tupen') ?></label>
 												<input type="text" class="form-control" name="tupen" id="tupen" placeholder="Tupen" value="<?= $tupen; ?>" />
 											</div>
+										</div>
 											<input type="hidden" name="id_pekerjaan" value="<?= $id_pekerjaan; ?>" /> 										
                                             <button type="submit" class="btn btn-primary"><?= $button;?></button>
 											<a href="<?= base_url('pekerjaan') ?>" class="btn btn-warning">Cancel</a>

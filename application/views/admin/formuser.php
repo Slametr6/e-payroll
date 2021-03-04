@@ -23,7 +23,7 @@
 											</div>
 											<input type="hidden" name="id_user" value="<?= $id_user; ?>" /> 
 											<button type="submit" class="btn btn-primary"><?= $button ?></button> 
-											<a href="<?= base_url('user') ?>" class="btn btn-default">Cancel</a>	
+											<a href="<?= base_url('user') ?>" class="btn btn-warning">Cancel</a>	
                                         </form>
                                     </div>
                                 </div>
