@@ -7,10 +7,10 @@ class Karyawan extends CI_Controller
     {
         $q = urldecode($this->input->get('q', TRUE));
         $start = intval($this->input->get('start'));
-        
         if ($q <> '') {
             $config['base_url'] = base_url() . 'admin/index.html?q=' . urlencode($q);
             $config['first_url'] = base_url() . 'admin/index.html?q=' . urlencode($q);
+
         } else {
             $config['base_url'] = base_url() . 'admin/index.html';
             $config['first_url'] = base_url() . 'admin/index.html';
@@ -51,9 +51,10 @@ class Karyawan extends CI_Controller
 				'id_pekerjaan' => $row->id_pekerjaan,
 			);
             $this->load->view('karyawan/karyawan_read', $data);
+
         } else {
             $this->session->set_flashdata('message', 'Record Not Found');
-            redirect(site_url('karyawan'));
+            redirect(base_url('karyawan'));
         }
     }
 
@@ -61,7 +62,7 @@ class Karyawan extends CI_Controller
     {
         $data = array(
             'button' => 'Create',
-            'action' => site_url('karyawan/create_action'),
+            'action' => base_url('karyawan/create_action'),
 			'id_karyawan' => set_value('id_karyawan'),
 			'nik' => set_value('nik'),
 			'username' => set_value('username'),
@@ -82,7 +83,6 @@ class Karyawan extends CI_Controller
 	public function create_action() 
     {
         $this->_rules();
-
         if ($this->form_validation->run() == FALSE) {
             $this->create();
         } else {
@@ -98,21 +98,19 @@ class Karyawan extends CI_Controller
 				'asal_sekolah' => $this->input->post('asal_sekolah',TRUE),
 				'id_pekerjaan' => $this->input->post('id_pekerjaan',TRUE),
 			);
-
             $this->M_karyawan->insert($data);
             $this->session->set_flashdata('message', 'Create Record Success');
-            redirect(site_url('karyawan'));
+            redirect(base_url('karyawan'));
         }
     }
 
 	public function update($id) 
     {
         $row = $this->M_karyawan->get_by_id($id);
-
         if ($row) {
             $data = array(
                 'button' => 'Update',
-                'action' => site_url('karyawan/update_action'),
+                'action' => base_url('karyawan/update_action'),
 				'id_karyawan' => set_value('id_karyawan', $row->id_karyawan),
 				'nik' => set_value('nik', $row->nik),
 				'username' => set_value('username', $row->username),
@@ -128,18 +126,19 @@ class Karyawan extends CI_Controller
 				'judul' => 'Data Karyawan',
 			);
             $this->load->view('index', $data);
+
         } else {
             $this->session->set_flashdata('message', 'Record Not Found');
-            redirect(site_url('karyawan'));
+            redirect(base_url('karyawan'));
         }
     }
 
 	public function update_action() 
     {
         $this->_rules();
-
         if ($this->form_validation->run() == FALSE) {
             $this->update($this->input->post('id_karyawan', TRUE));
+
         } else {
             $data = array(
 				'nik' => $this->input->post('nik',TRUE),
@@ -153,24 +152,23 @@ class Karyawan extends CI_Controller
 				'asal_sekolah' => $this->input->post('asal_sekolah',TRUE),
 				'id_pekerjaan' => $this->input->post('id_pekerjaan',TRUE),
 			);
-
             $this->M_karyawan->update($this->input->post('id_karyawan', TRUE), $data);
             $this->session->set_flashdata('message', 'Update Record Success');
-            redirect(site_url('karyawan'));
+            redirect(base_url('karyawan'));
         }
     }
 
 	public function delete($id) 
     {
         $row = $this->M_karyawan->get_by_id($id);
-
         if ($row) {
             $this->M_karyawan->delete($id);
             $this->session->set_flashdata('message', 'Delete Record Success');
-            redirect(site_url('karyawan'));
+            redirect(base_url('karyawan'));
+
         } else {
             $this->session->set_flashdata('message', 'Record Not Found');
-            redirect(site_url('karyawan'));
+            redirect(base_url('karyawan'));
         }
     }
 
@@ -183,9 +181,7 @@ class Karyawan extends CI_Controller
 		$this->form_validation->set_rules('alamat', 'alamat', 'trim|required');
 		$this->form_validation->set_rules('jenis_kelamin', 'jenis kelamin', 'trim|required');
 		$this->form_validation->set_rules('id_pekerjaan', 'id pekerjaan', 'trim|required');
-
 		$this->form_validation->set_rules('id_karyawan', 'id_karyawan', 'trim');
 		$this->form_validation->set_error_delimiters('<span class="text-danger">', '</span>');
     }
-
 }

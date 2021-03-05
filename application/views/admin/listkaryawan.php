@@ -61,17 +61,17 @@
 										{
 										?>
 										<tr>
-											<td width="80px"><?= ++$start ?></td>
-											<td><?= $karyawan->nik ?></td>
-											<td><?= $karyawan->username ?></td>
-											<td><?= $karyawan->password ?></td>
-											<td><?= $karyawan->nama ?></td>
-											<td><?= $karyawan->alamat ?></td>
-											<td><?= $karyawan->jenis_kelamin ?></td>
-											<td><?= $karyawan->agama ?></td>
-											<td><?= $karyawan->pendidikan ?></td>
-											<td><?= $karyawan->asal_sekolah ?></td>
-											<td><?= $karyawan->id_pekerjaan ?></td>
+											<td width="80px"><?= ++$start;?></td>
+											<td><?= $karyawan->nik;?></td>
+											<td><?= $karyawan->username;?></td>
+											<td><?= $karyawan->password;?></td>
+											<td><?= $karyawan->nama;?></td>
+											<td><?= $karyawan->alamat;?></td>
+											<td><?= $karyawan->jenis_kelamin;?></td>
+											<td><?= $karyawan->agama;?></td>
+											<td><?= $karyawan->pendidikan;?></td>
+											<td><?= $karyawan->asal_sekolah;?></td>
+											<td><?= $karyawan->id_pekerjaan;?></td>
 											<td style="text-align:center" width="200px">
 												<?php  
 												echo anchor(base_url('karyawan/update/'.$karyawan->id_karyawan),'<i class="fa fa-pencil-square-o"> Edit</i>'); 
@@ -90,10 +90,10 @@
                                         </table>
 										<div class="row">
 											<div class="col-md-6">
-												<a href="#" class="btn btn-sm btn-primary">Total Record : <?= $total_rows ?></a>
+												<a href="#" class="btn btn-sm btn-primary">Total Record : <?= $total_rows;?></a>
 											</div>
 											<div class="col-md-6 text-right">
-												<?= $pagination ?>
+												<?= $pagination;?>
 											</div>
 										</div>
                                     </div>
@@ -106,5 +106,4 @@
             </div>
         </div>
         <!-- main content area end -->
-        <!-- footer area start-->
         

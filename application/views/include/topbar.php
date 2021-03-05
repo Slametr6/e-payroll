@@ -7,7 +7,7 @@
                             <nav>
                                 <ul id="nav_menu">
 									<?php
-										if ($this->session->userdata('level') == 'admin') {
+									if ($this->session->userdata('level') == 'admin') {
 									?>
 									<li><a href="<?= base_url('app');?>"><i class="fa fa-home"></i><span>Home</span></a></li>
                                     <li><a href="<?= base_url();?>karyawan"><i class="fa fa-users"></i><span>Data Karyawan</span></a></li>
@@ -26,6 +26,7 @@
 										$iduser = $this->session->userdata('id_user');
 										$data = $this->db->query("SELECT * FROM karyawan, gaji WHERE karyawan.nik=gaji.nik and karyawan.id_karyawan='$iduser' ORDER BY gaji.tgl DESC")->row();
 									?>
+									
 									<li><a href="<?= base_url();?>app/tampilprofil/<?= $this->session->userdata('id_user');?>"><i class="fa fa-user"></i><span>Profil</span></a></li>
                                     <li><a href="<?= base_url();?>app/slip_gaji/<?= $data->nik;?>/<?= $data->tgl;?>"><i class="fa fa-money"></i><span>Lihat Gaji</span></a></li>
 									<?php } ?>

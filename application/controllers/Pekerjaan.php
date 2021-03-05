@@ -7,10 +7,10 @@ class Pekerjaan extends CI_Controller
     {
         $q = urldecode($this->input->get('q', TRUE));
         $start = intval($this->input->get('start'));
-        
         if ($q <> '') {
             $config['base_url'] = base_url() . 'admin/index.html?q=' . urlencode($q);
             $config['first_url'] = base_url() . 'admin/index.html?q=' . urlencode($q);
+
         } else {
             $config['base_url'] = base_url() . 'admin/index.html';
             $config['first_url'] = base_url() . 'admin/index.html';
@@ -49,6 +49,7 @@ class Pekerjaan extends CI_Controller
 			'tupen' => $row->tupen,
 			);
             $this->load->view('pekerjaan/pekerjaan_read', $data);
+			
         } else {
             $this->session->set_flashdata('message', 'Record Not Found');
             redirect(base_url('pekerjaan'));
@@ -76,9 +77,9 @@ class Pekerjaan extends CI_Controller
 	public function create_action() 
     {
         $this->_rules();
-
         if ($this->form_validation->run() == FALSE) {
             $this->create();
+
         } else {
             $data = array(
 			'pekerjaan' => $this->input->post('pekerjaan',TRUE),
@@ -88,7 +89,6 @@ class Pekerjaan extends CI_Controller
 			'tupen' => $this->input->post('tupen',TRUE),
 			'tukel' => $this->input->post('tukel',TRUE),
 			);
-
             $this->M_pekerjaan->insert($data);
             $this->session->set_flashdata('message', 'Create Record Success');
             redirect(base_url('pekerjaan'));
@@ -98,7 +98,6 @@ class Pekerjaan extends CI_Controller
 	public function update($id) 
     {
         $row = $this->M_pekerjaan->get_by_id($id);
-
         if ($row) {
             $data = array(
                 'button' => 'Update',
@@ -114,6 +113,7 @@ class Pekerjaan extends CI_Controller
 				'judul' => 'Data Pekerjaan',
 			);
             $this->load->view('index', $data);
+
         } else {
             $this->session->set_flashdata('message', 'Record Not Found');
             redirect(base_url('pekerjaan'));
@@ -123,9 +123,9 @@ class Pekerjaan extends CI_Controller
 	public function update_action() 
     {
         $this->_rules();
-
         if ($this->form_validation->run() == FALSE) {
             $this->update($this->input->post('id_pekerjaan', TRUE));
+
         } else {
             $data = array(
 			'pekerjaan' => $this->input->post('pekerjaan',TRUE),
@@ -135,7 +135,6 @@ class Pekerjaan extends CI_Controller
 			'tupen' => $this->input->post('tupen',TRUE),
 			'tukel' => $this->input->post('tukel',TRUE),
 			);
-
             $this->M_pekerjaan->update($this->input->post('id_pekerjaan', TRUE), $data);
             $this->session->set_flashdata('message', 'Update Record Success');
             redirect(base_url('pekerjaan'));
@@ -145,11 +144,11 @@ class Pekerjaan extends CI_Controller
 	public function delete($id) 
     {
         $row = $this->M_pekerjaan->get_by_id($id);
-
         if ($row) {
             $this->M_pekerjaan->delete($id);
             $this->session->set_flashdata('message', 'Delete Record Success');
             redirect(base_url('pekerjaan'));
+
         } else {
             $this->session->set_flashdata('message', 'Record Not Found');
             redirect(base_url('pekerjaan'));
@@ -163,7 +162,6 @@ class Pekerjaan extends CI_Controller
 		$this->form_validation->set_rules('tukes', 'tukes', 'trim|required');
 		$this->form_validation->set_rules('tutra', 'tutra', 'trim|required');
 		$this->form_validation->set_rules('tupen', 'tupen', 'trim|required');
-
 		$this->form_validation->set_rules('id_pekerjaan', 'id_pekerjaan', 'trim');
 		$this->form_validation->set_error_delimiters('<span class="text-danger">', '</span>');
     }

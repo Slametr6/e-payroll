@@ -10,20 +10,20 @@
                                         <h4 class="header-title"><?= $judul;?></h4>
                                         <form action="<?= $action;?>" method="post">
 											<div class="form-group">
-												<label for="varchar">Nama <?= form_error('nama') ?></label>
-												<input type="text" class="form-control" name="nama" id="nama" placeholder="Nama" value="<?= $nama; ?>" />
+												<label for="varchar">Nama <?= form_error('nama');?></label>
+												<input type="text" class="form-control" name="nama" id="nama" placeholder="Nama" value="<?= $nama;?>" />
 											</div>
 											<div class="form-group">
-												<label for="varchar">Username <?= form_error('username') ?></label>
-												<input type="text" class="form-control" name="username" id="username" placeholder="Username" value="<?= $username; ?>" />
+												<label for="varchar">Username <?= form_error('username');?></label>
+												<input type="text" class="form-control" name="username" id="username" placeholder="Username" value="<?= $username;?>" />
 											</div>
 											<div class="form-group">
-												<label for="varchar">Password <?= form_error('password') ?></label>
-												<input type="text" class="form-control" name="password" id="password" placeholder="Password" value="<?= $password; ?>" />
+												<label for="varchar">Password <?= form_error('password');?></label>
+												<input type="text" class="form-control" name="password" id="password" placeholder="Password" value="<?= $password;?>" />
 											</div>
-											<input type="hidden" name="id_user" value="<?= $id_user; ?>" /> 
-											<button type="submit" class="btn btn-primary"><?= $button ?></button> 
-											<a href="<?= base_url('user') ?>" class="btn btn-warning">Cancel</a>	
+											<input type="hidden" name="id_user" value="<?= $id_user;?>" /> 
+											<button type="submit" class="btn btn-primary"><?= $button;?></button> 
+											<a href="<?= base_url('user');?>" class="btn btn-warning">Cancel</a>	
                                         </form>
                                     </div>
                                 </div>

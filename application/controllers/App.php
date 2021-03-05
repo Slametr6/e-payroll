@@ -1,8 +1,8 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class App extends CI_Controller {
-
+class App extends CI_Controller 
+{
 	public function index()
 	{
 		if ($this->session->userdata('username') == "") {
@@ -68,7 +68,6 @@ class App extends CI_Controller {
 				'asal_sekolah' => $this->input->post('asal_sekolah'),
 				'id_pekerjaan' => $this->input->post('id_pekerjaan'),
 			);
-
 			$this->db->where('id_karyawan', $id);
 			$this->db->update('karyawan', $data);
 			?>
@@ -97,7 +96,6 @@ class App extends CI_Controller {
 				'username' => $this->input->post('username'),
 				'password' => $this->input->post('password'),				
 			);
-
 			$this->db->where('id_user', $id);
 			$this->db->update('user', $data);
 			?>

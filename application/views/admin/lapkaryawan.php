@@ -2,22 +2,23 @@
 <html>
 <head>
 	<title>Data Karyawan</title>
-	<base href="<?= base_url() ?>">
+	<base href="<?= base_url();?>">
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
     <!-- bootstrap 3.0.2 -->
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="<?= base_url();?>assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
 </head>
 <body onload="print()">
 	<center>
 		<table>
 			<tr>
 				<td>
-					<img src="gambar/logo.png" style="width: 100px; height: 100px;">
+				<img src="<?= base_url();?>assets/images/icon/dpt1.png" style="width: 80px; height: 80px;">
 				</td>
 				<td>
 					<center>
-						<h3>PT. Sinar Metrindo Perkasa (SIMETRI)</h3>
-					<h5>Rukan Aries Niaga Blok A1 No 3A dan 3B Jl. Taman Aries no telp (021) 58906959, faks  (021) 58907350.</h5>
+					<h3>PT Dwi Pratama Teknik</h3>
+					<h5>Jl Bendi Besar No. 186, Kebayoran Lama, Kebayoran Lama Utara.</h5>
+					<h5>Kota Administrasi, Jakarta Selatan – Indonesia</h5>
 					</center>
 				</td>
 			</tr>
@@ -45,15 +46,15 @@
 			foreach ($query->result() as $row) {
 			 ?>
 			<tr>
-				<td><?= $no++; ?></td>
-				<td><?= $row->nik; ?></td>
-				<td><?= $row->nama; ?></td>
-				<td><?= $row->alamat; ?></td>
-				<td><?= $row->jenis_kelamin; ?></td>
-				<td><?= $row->agama; ?></td>
-				<td><?= $row->pendidikan; ?></td>
-				<td><?= $row->asal_sekolah; ?></td>
-				<td><?= $row->pekerjaan; ?></td>
+				<td><?= $no++;?></td>
+				<td><?= $row->nik;?></td>
+				<td><?= $row->nama;?></td>
+				<td><?= $row->alamat;?></td>
+				<td><?= $row->jenis_kelamin;?></td>
+				<td><?= $row->agama;?></td>
+				<td><?= $row->pendidikan;?></td>
+				<td><?= $row->asal_sekolah;?></td>
+				<td><?= $row->pekerjaan;?></td>
 			</tr>
 			<?php } ?>
 		</tbody>

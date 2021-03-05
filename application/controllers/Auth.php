@@ -1,8 +1,8 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Auth extends CI_Controller {
-
+class Auth extends CI_Controller 
+{
 	public function index()
 	{
 		if ($this->input->post() == NULL) {
@@ -39,7 +39,7 @@ class Auth extends CI_Controller {
 					alert('Username dan password salah !');
 					windows.location="<?= base_url('auth');?>";
 				</script>
-				<?php
+				<?php 
 			}
 		}
 	}
@@ -68,7 +68,7 @@ class Auth extends CI_Controller {
 					alert('Password berhasil dirubah, silahkan login kembali !');
 					window.location='<?= base_url('auth/logout');?>';
 				</script>
-				<?php
+				<?php 
 			}
 		}
 	}

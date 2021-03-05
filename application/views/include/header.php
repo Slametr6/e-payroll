@@ -6,7 +6,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>E-Payroll - <?= $judul;?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" type="image/png" href="<?= base_url();?>assets/images/icon/favicon.ico">
+    <link rel="shortcut icon" type="image/png" href="<?= base_url();?>assets/images/icon/dpt1.png">
     <link rel="stylesheet" href="<?= base_url();?>assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="<?= base_url();?>assets/css/font-awesome.min.css">
     <link rel="stylesheet" href="<?= base_url();?>assets/css/themify-icons.css">
@@ -41,7 +41,7 @@
                 <div class="row align-items-center">
                     <div class="col-md-3">
                         <div class="logo">
-                            <a href="<?= base_url('app');?>"><img src="<?= base_url();?>assets/images/icon/logo3.png" alt="logo"></a>
+                            <a href="<?= base_url('app');?>"><img src="<?= base_url();?>assets/images/icon/dpt.png" alt="logo"></a>
                         </div>
                     </div>
                     <!-- profile info & task notification -->

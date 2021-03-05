@@ -8,20 +8,20 @@
                                 <div class="card">
                                     <div class="card-body">
                                         <h4 class="header-title"><?= $judul;?></h4>
-                                        <form method="post">
-											<div class="form-group">
+                                        <form action="" method="post">
+											<div class="form-group col-md-6">
 												<label>nama</label>
-												<input type="text" name="nama" class="form-control" value="<?= $query->nama ?>">
+												<input type="text" name="nama" class="form-control" value="<?= $query->nama;?>">
 											</div>
-											<div class="form-group">
+											<div class="form-group col-md-6">
 												<label>username</label>
-												<input type="text" name="username" class="form-control" value="<?= $query->username ?>">
+												<input type="text" name="username" class="form-control" value="<?= $query->username;?>">
 											</div>
-											<div class="form-group">
+											<div class="form-group col-md-6">
 												<label>password</label>
-												<input type="text" name="password" class="form-control" value="<?= $query->password ?>">
+												<input type="text" name="password" class="form-control" value="<?= $query->password;?>">
 											</div>											
-                                            <button type="submit" class="btn btn-primary mt-4 pr-4 pl-4">Submit</button>
+                                            <button type="submit" class="btn btn-primary">Submit</button>
                                         </form>
                                     </div>
                                 </div>

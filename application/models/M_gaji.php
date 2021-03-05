@@ -3,7 +3,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class M_gaji extends CI_Model 
 {
-	
 	public $table = 'gaji';
 	public $id = 'id_gaji';
 	public $order = 'DESC';

@@ -7,16 +7,16 @@
                             <div class="col-12 mt-5">
                                 <div class="card">
                                     <div class="card-body">
-                                        <form method="post">
-											<div class="form-group">
+                                        <form action="" method="post">
+											<div class="form-group col-md-6">
 												<label>Password lama</label>
 												<input type="text" name="pass_lama" class="form-control">
 											</div>
-											<div class="form-group">
+											<div class="form-group col-md-6">
 												<label>Password baru</label>
 												<input type="text" name="pass_baru" class="form-control">
 											</div>											
-                                            <button type="submit" class="btn btn-primary mt-4 pr-4 pl-4">Submit</button>
+                                            <button type="submit" class="btn btn-primary">Submit</button>
                                         </form>
                                     </div>
                                 </div>
