@@ -1,6 +1,5 @@
 # e-payroll
 **Aplikasi Penggajian PT. Dwi Pratama Teknik**
-![dpt](https://user-images.githubusercontent.com/53107522/128480508-76b07b73-33c1-40fa-b348-9a6a5fd4af1b.png)
 
 Aplikasi E-Payroll merupakan aplikasi kas sederhana yang dapat digunakan untuk Penggajian pada PT. Dwi Pratama Teknik. 
 Berikut merupakan tampilan program yang dibuat.
@@ -11,8 +10,7 @@ Berikut merupakan tampilan program yang dibuat.
 # Tampilan Dashboard
 ![image](https://user-images.githubusercontent.com/53107522/128480449-1a1b92f0-48ee-4c85-a39f-08d1a5d66427.png)
 
-Aplikasi ini masih jauh dari kesempurnaan, maka dari itu dipersilahkan undtuk di kembangkan dan dipergunakan sebagaimana mestinya. 
-Terimakasih banyak.
+Aplikasi ini masih jauh dari kesempurnaan, maka dari itu dipersilahkan untuk di kembangkan dan dipergunakan sebagaimana mestinya. Terimakasih banyak.
 
 Saran dan masukan yang membangun diharapkan untuk perbaikan kedepannya : 
 Mail : slametr6@gmail.com, 
