@@ -1,7 +1,7 @@
 # e-payroll
 **Aplikasi Penggajian PT. Dwi Pratama Teknik**
 
-Aplikasi E-Payroll merupakan aplikasi kas sederhana yang dapat digunakan untuk Penggajian pada PT. Dwi Pratama Teknik. 
+Aplikasi E-Payroll merupakan aplikasi sederhana yang dapat digunakan untuk Penggajian pada PT. Dwi Pratama Teknik. 
 Berikut merupakan tampilan program yang dibuat.
 
 # Tampilan Login
