@@ -1,7 +1,7 @@
 # e-payroll
-**Payroll Application PT. Dwi Pratama Teknik**
+**Payroll Application PT. XYZ**
 
-The E-Payroll application is a simple application that can be used for Payroll at PT. Dwi Pratama Teknik. Here is a view of the program that was created.
+The E-Payroll application is a simple application that can be used for Payroll at PT. XYZ. Here is a view of the program that was created.
 
 # Login View
 ![image](https://user-images.githubusercontent.com/53107522/128480398-2b87b847-3ada-4751-915a-838d4e2fe80a.png)
